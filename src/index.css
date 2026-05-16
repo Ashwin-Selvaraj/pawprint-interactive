@@ -1,49 +1,5 @@
 @import 'tailwindcss';
 
-@layer utilities {
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-}
-
-/* Irregular blinks: replay via key on .puppy-lid */
-.puppy-lid {
-  transform: scaleY(0);
-  animation: blink-once 280ms ease-in-out;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(1.5deg);
-  }
-}
-
-@keyframes blink-once {
-  0%,
-  100% {
-    transform: scaleY(0);
-  }
-  45%,
-  55% {
-    transform: scaleY(1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-float {
-    animation: none !important;
-  }
-
-  .puppy-lid {
-    animation: none !important;
-    transform: scaleY(0) !important;
-  }
-}
-
 body {
   margin: 0;
 }
@@ -51,8 +7,4 @@ body {
 #root {
   min-height: 100svh;
   width: 100%;
-  max-width: none;
-  margin: 0;
-  border: none;
-  text-align: initial;
 }
